@@ -9,6 +9,7 @@ import { Data } from 'src/dataResponse';
 })
 export class DataComponent implements OnInit {
   responseData!: Data[];
+  selectedData!: Data;
 
   constructor(private companyService: CompanyApiService) { }
 
@@ -22,5 +23,9 @@ export class DataComponent implements OnInit {
         console.error(error); // Handle error if necessary
       }
     });
+  }
+
+  showDetails(data: Data) {
+    this.selectedData = { ...data };
   }
 }
