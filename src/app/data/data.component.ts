@@ -26,6 +26,6 @@ export class DataComponent implements OnInit {
   }
 
   showDetails(data: Data) {
-    this.selectedData = { ...data };
+    this.selectedData = data;
   }
 }
