@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebExamPrep';
+  name = 'Levi Gilmartin';
+  studentNum = 'S00227414';
 }
