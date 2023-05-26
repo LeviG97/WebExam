@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { DataComponent } from './data/data.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataComponent,
+
     
   ],
   imports: [

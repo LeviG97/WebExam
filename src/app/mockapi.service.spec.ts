@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CompanyApiService } from './company-api.service';
+import { CompanyApiService } from './mockapi.service';
 
 describe('CompanyApiService', () => {
   let service: CompanyApiService;

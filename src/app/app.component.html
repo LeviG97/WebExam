@@ -1,7 +1,51 @@
-<div>
-    <span>{{ title }} app is running! Author {{name}} {{studentNum}}</span>
+<h1>{{ title }}</h1>
+<h3>By {{ name }}</h3>
+<p>Student Number: {{ studentNum }}</p>
+<p>Url : {{url}}</p>
 
-    <app-data></app-data>
+<button class="btn btn-primary" (click)="getStaff()">Fetch Staff Details</button>
+
+<div class="row" *ngIf="results">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Namwe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of results">
+          <td>{{ staff.lastname }}, {{staff.name}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-    
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of results">
+          <td>{{ staff.jobtitle }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of results">
+          <td>{{ staff.country }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
